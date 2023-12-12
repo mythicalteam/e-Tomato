@@ -1,0 +1,48 @@
+﻿services:
+  etomato-db:
+    hostname: etomato-db
+    image: mongo
+    expose:
+      - 27017
+    ports:
+      - 6130:27017
+    volumes:
+      - etomato-data:/data/db
+    networks:
+      etomato_net:
+        ipv4_address: 16.1.0.1
+    restart: always
+    command: mongod --replSet etomato-set --bind_ip  16.1.0.1
+  etomato-init:
+    image: mongo
+    restart: 'no'
+    depends_on:
+      - etomato-db
+    networks:
+      etomato_net:
+        ipv4_address: 16.1.0.2
+    command: >
+      mongosh --host etomato-db:27017 --eval
+      '
+      db = (new Mongo("16.1.0.1:27017")).getDB("admin");
+      config = {
+      "_id" : "etomato-set",
+      "members" : [
+        {
+          "_id" : 0,
+          "host" : "etomato-db:27017"
+        }
+      ]
+      };
+      rs.initiate(config);
+      '
+volumes:
+  etomato-data:
+
+networks:
+  etomato_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 16.1.0.0/24
+          gateway: 16.1.0.254

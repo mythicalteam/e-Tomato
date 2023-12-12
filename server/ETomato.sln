@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETomato.Api", "ETomato.Api\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETomato.Analyzer", "ETomato.Analyzer\ETomato.Analyzer.csproj", "{5818DEE6-246F-4346-B69E-6E825FC7235D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETomato.Api.Generator", "ETomato.Api.Generator\ETomato.Api.Generator.csproj", "{5EBA377C-7400-4A19-812B-A3BA3F2C2D45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETomato.Source.Generator", "ETomato.Source.Generator\ETomato.Source.Generator.csproj", "{239704A3-57A6-4D99-A1BD-13B9A3524BCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{5818DEE6-246F-4346-B69E-6E825FC7235D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5818DEE6-246F-4346-B69E-6E825FC7235D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5818DEE6-246F-4346-B69E-6E825FC7235D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EBA377C-7400-4A19-812B-A3BA3F2C2D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EBA377C-7400-4A19-812B-A3BA3F2C2D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EBA377C-7400-4A19-812B-A3BA3F2C2D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EBA377C-7400-4A19-812B-A3BA3F2C2D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{239704A3-57A6-4D99-A1BD-13B9A3524BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239704A3-57A6-4D99-A1BD-13B9A3524BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239704A3-57A6-4D99-A1BD-13B9A3524BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239704A3-57A6-4D99-A1BD-13B9A3524BCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
